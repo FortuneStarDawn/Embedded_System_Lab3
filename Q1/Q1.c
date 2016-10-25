@@ -13,6 +13,7 @@ int main(void)
     P1OUT = LED1 + B1;
     P1REN |= B1;
     P1IE |= B1;
+    P1IES &= ~B1;
     P1IFG &= ~B1;
     _BIS_SR(GIE);
     BCSCTL3 |= LFXT1S_2;
